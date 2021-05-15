@@ -5,6 +5,7 @@ import "./App.css";
 
 import { ToDoContext } from "./Context/ToDoContext";
 import todoReducer from "./Context/reducer";
+import ToDoForm from "./Components/ToDoForm";
 
 const App = () => {
   const [todos, dispatch] = useReducer(todoReducer, []);
@@ -13,6 +14,7 @@ const App = () => {
       <Container fluid>
         <h1>ToDo App with Context API</h1>
       </Container>
+      <ToDoForm></ToDoForm>
     </ToDoContext.Provider>
   );
 };
